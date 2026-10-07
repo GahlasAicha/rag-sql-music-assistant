@@ -48,7 +48,7 @@ An AI agent that answers questions by choosing between two sources: a real SQL d
 - Sources are cited at article level, not at passage level.
 - The model sometimes adds details beyond the retrieved passages. I spot-checked answers against the passages, but I have not run a systematic evaluation.
 - The corpus is small (8 articles) and the agent has no conversation memory.
-- Generated SQL is executed on the database directly. The tool description asks for SELECT only, but the code does not enforce it.
+- The database is opened read-only, so the model cannot modify data, but the SQL it generates is not otherwise validated.
 - The public Gradio link is temporary, so screenshots are included instead.
 
 ## Run it yourself
